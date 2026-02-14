@@ -15,5 +15,6 @@ results/*.json
 runs/
 wandb/
 .DS_Store
-models/
+models/*
+!models/ppo_mm.zip
 !assets/
