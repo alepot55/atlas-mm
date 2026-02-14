@@ -73,7 +73,7 @@ All 4 properties verified for **all possible inputs** using the Z3 SMT solver.
 | Orders processed | 100,000 |
 | Fill ratio | 50.1% |
 
-> Pure Python implementation. CUDA kernel for the matching engine is planned ([#1](https://github.com/alepot55/atlas-mm/issues/1)) -- targeting 10M+ orders/sec with parallel price-level matching on GPU.
+> Pure Python implementation. Bottleneck: dict lookup for price levels and linear scan for sorted insertion. A Cython/CUDA implementation would target >10M orders/sec with parallel price-level matching on GPU ([#1](https://github.com/alepot55/atlas-mm/issues/1)).
 
 ## Architecture
 
